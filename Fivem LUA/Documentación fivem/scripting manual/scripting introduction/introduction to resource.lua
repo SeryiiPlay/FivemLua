@@ -95,7 +95,7 @@ description 'Este recurso es una prueba ' ---- No olvideis nunca la descripción
 version 'alpha' ---- no tiene porque ser numeros en la version da igual lo que pones como si pones 'mama' logicamente no tendria esa palabra sentido ahí.
 
 client_scripts{ ----- Recordar que si son varios clients teneis que poner client_scripts si es solo uno simplemente con que pongais client_script llega lo mismo para server_script
-    '@es_extended/locale.lua',
+    '@es_extended/locale.lua',  --  <-
     'locales/es.lua',
     'config.lua',
     'client/client.lua',
@@ -103,8 +103,8 @@ client_scripts{ ----- Recordar que si son varios clients teneis que poner client
 }
 
 server_scripts {
-    '@mysql-async/lib/MySQL.lua',
-    '@es_extended/locale.lua',
+    '@mysql-async/lib/MySQL.lua',  --  <-
+    '@es_extended/locale.lua',  --  <-
     'locales/es.lua',
     'config.lua',
     'server/server.lua',
