@@ -94,7 +94,7 @@ author 'Seryii' ---- Si la script me pertenece o la modifique bastante para que 
 description 'Este recurso es una prueba ' ---- No olvideis nunca la descripción
 version 'alpha' ---- no tiene porque ser numeros en la version da igual lo que pones como si pones 'mama' logicamente no tendria esa palabra sentido ahí.
 
-client_scripts{ ----- Recordar que si son varios clients teneis que poner client_scripts si es solo uno simplemente con que pongais client_script llega lo mismo para server_script
+client_scripts{ ----- Recordar que si son varios clients teneis que poner client_scripts si es solo uno simplemente con que pongais client_script, el server_script solo puede existir uno lo mismo para el config.lua
     '@es_extended/locale.lua',  --  <-
     'locales/es.lua',
     'config.lua',
@@ -102,16 +102,15 @@ client_scripts{ ----- Recordar que si son varios clients teneis que poner client
     'client/client_amazon.lua'
 }
 
-server_scripts {
+server_script {
     '@mysql-async/lib/MySQL.lua',  --  <-
     '@es_extended/locale.lua',  --  <-
     'locales/es.lua',
     'config.lua',
-    'server/server.lua',
-    'server/server_amazon.lua'
+    'server/server.lua'
 }
 
---Si el archivo al de msql y extended tendreis que poner lo siguiente dentro del client_scripts y server_scripts (os marco con una flecha lo que se añade), esto solo lo añades si el archivo tiene sql
+--Si el archivo al de msql y extended tendreis que poner lo siguiente dentro del client_scripts y server_script (os marco con una flecha lo que se añade), esto solo lo añades si el archivo tiene sql
 -- si no simplemente no hace falta agregarlo.
 
 -- otro dato no os olvideis de la comas, solo en el ultimo no se le pone una coma, si en el alguno de los anteriores no pones comas te va a dar error el recurso y tendras que corregirlo.
@@ -145,3 +144,8 @@ Se recomienda no cambiarlos a menos que sepa lo que está haciendo.
 Muchos de estos recursos proporcionan funcionalidades útiles a su servidor.
 
 Puede encontrar más información sobre los recursos estándar en el "catálogo de recursos" ( el catalogo de recursos lo veremos en otro momento aquí dejare en que documento estará ("") ).
+
+
+-------------------------------------------------------------------------------- EJERCICIO PARA ENTREGAR --------------------------------------------------------------------------------------
+
+entra a este link para hacer el ejercicio te recomiendo que lo hagas sin mirar, te ayudara a ver lo que sabes : https://forms.gle/XpD5qCymc9ZSNMGi6
